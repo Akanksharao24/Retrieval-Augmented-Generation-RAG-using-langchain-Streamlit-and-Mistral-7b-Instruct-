@@ -91,15 +91,17 @@ This will launch the web app in your browser, where you can upload PDFs and star
 
 ### User Interface
 Below are examples of different types of uploaded documents and queries:
+
 #### Email Extraction
-![Email Query Example]([images/email_example_1.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/1.jpg))
-![Email Query Example]([images/email_example_2.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/2.jpg))
+![Email Query Example](https://raw.githubusercontent.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/main/Images/1.jpg)
+![Email Query Example](https://raw.githubusercontent.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/main/Images/2.jpg)
 
 #### Invoice Processing
-![Invoice Example]([images/invoice_example.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/3.jpg))
+![Invoice Example](https://raw.githubusercontent.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/main/Images/3.jpg)
 
 #### Storybook Analysis
-![Storybook Example]([images/storybook_example.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/4.jpg))
+![Storybook Example](https://raw.githubusercontent.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/main/Images/4.jpg)
+
 
 ---
 
