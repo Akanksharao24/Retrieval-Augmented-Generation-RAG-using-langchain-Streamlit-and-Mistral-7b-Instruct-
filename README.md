@@ -18,6 +18,8 @@ This project implements a **lightweight, real-time Retrieval-Augmented Generatio
 
 ✅ **Confidence Scores**: Provides a confidence score based on text clarity and contextual relevance.
 
+---
+
 ## Tech Stack
 
 - **LangChain**: For implementing Retrieval-Augmented Generation (RAG).
@@ -27,6 +29,8 @@ This project implements a **lightweight, real-time Retrieval-Augmented Generatio
 - **HuggingFace Embeddings**: To generate text embeddings for document indexing.
 - **PyPDFLoader**: For loading and processing PDF documents.
 - **pytesseract & pdf2image**: To handle scanned PDFs using OCR (Optical Character Recognition).
+
+---
 
 ## Installation & Setup
 
@@ -43,8 +47,6 @@ cd RAG-Langchain-Streamlit
 python -m venv venv
 source venv/bin/activate  # On Windows, use: venv\Scripts\activate
 
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 ### Running the Application
@@ -56,6 +58,8 @@ streamlit run app.py
 ```
 
 This will launch the web app in your browser, where you can upload PDFs and start querying them.
+
+---
 
 ## How It Works
 
@@ -74,12 +78,30 @@ This will launch the web app in your browser, where you can upload PDFs and star
 5. **User Interaction**:
    - The chat interface, built with **Streamlit**, allows users to ask questions and receive contextual responses.
 
+---
+
 ## Expected Output
 
 - **High retrieval accuracy**, ensuring only relevant information is extracted.
 - **Fast response times**, optimized by caching and efficient indexing.
 - **Human-readable summarized answers** rather than raw data.
 - **Confidence scores** to indicate result reliability.
+  
+---
+
+### User Interface
+Below are examples of different types of uploaded documents and queries:
+#### Email Extraction
+![Email Query Example]([images/email_example_1.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/1.jpg))
+![Email Query Example]([images/email_example_2.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/2.jpg))
+
+#### Invoice Processing
+![Invoice Example]([images/invoice_example.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/3.jpg))
+
+#### Storybook Analysis
+![Storybook Example]([images/storybook_example.png](https://github.com/Akanksharao24/Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-/blob/main/Images/4.jpg))
+
+---
 
 ## Team - Dead Strings
 
@@ -87,6 +109,8 @@ This will launch the web app in your browser, where you can upload PDFs and star
 👩‍💻 **Thrishita**\
 👩‍💻 **Sriya**\
 👩‍💻 **Akanksha**
+
+---
 
 ## Future Enhancements
 
