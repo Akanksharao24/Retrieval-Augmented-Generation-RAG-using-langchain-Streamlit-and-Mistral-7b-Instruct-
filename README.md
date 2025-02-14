@@ -1,43 +1,110 @@
-# Retrieval-Augmented-Generation-RAG-using-langchain-Streamlit-and-Mistral-7b-Instruct-
-Develop a lightweight, real-time Retrieval-Augmented Generation (RAG) system that allows
-users to upload multiple unrelated multi-page PDF documents and extract relevant highly
-information based on a query.
+Retrieval-Augmented Generation (RAG) using LangChain, Streamlit, and Mistral-7B-Instruct
 
-The System must ensure that:
+Overview
 
-. Each document is treated as an independent knowledge source - responses should be per
-document, with no cross-document contamination.
+This project implements a lightweight, real-time Retrieval-Augmented Generation (RAG) system that enables users to upload multiple unrelated multi-page PDF documents and extract relevant contextual information based on a query. The system efficiently handles structured and unstructured PDFs like invoices, reports, legal papers, and contracts.
 
-. The extracted responses are contextualized, showing where in the document the answer
-is found.
+Features
 
-. The System works across structured and unstructured PDFs, handling invoices, reports,
-legal papers and contracts.
-Aiden Al
+✅ Independent Document Handling: Each PDF is treated as an independent knowledge source, ensuring no cross-document contamination.
 
-. It efficiently processes large PDFs, prioritizing important sections rather than blingh
-scanning all pages.
+✅ Contextualized Responses: Extracted answers indicate the section in the document where the response is found.
 
-. Implement fast indexing or caching for already-uploaded PDFs so that subsequent
-searches don't reprocess everything from scratch.
+✅ Efficient Processing: Prioritizes important sections of large PDFs rather than blindly scanning all pages.
 
-Expected Output:
+✅ Fast Indexing & Caching: Already uploaded PDFs are indexed for quick retrieval, avoiding redundant processing.
 
-. Evaluation based on retrieval accuracy, response quality, and efficiency.
+✅ Summarization of Extracted Data: Generates human-readable summaries instead of raw values.
 
-. A QA system that retrieves the most relevant and accurate information while flagging
-contradictory data
+✅ Confidence Scores: Provides a confidence score based on text clarity and contextual relevance.
 
-Brownie Points:
-. Summarization of Extracted Data, i.e. Instead of pulling raw values, the system can
-generate a short, human-readable summary of extracted data.
+Tech Stack
 
-. Confidence Score, i.e. The system should provide confidence scores for extracted
-results based on text clarity, and contextual relevance.
+LangChain: For implementing Retrieval-Augmented Generation (RAG).
 
+Streamlit: For building an interactive web application.
 
-Team - Dead Strings 
-Sree Chakritha 
-Thrishita 
-Sriya 
-Akanksha 
+Mistral-7B-Instruct: A powerful open-source LLM for conversational responses.
+
+FAISS: For fast and efficient vector-based document retrieval.
+
+HuggingFace Embeddings: To generate text embeddings for document indexing.
+
+PyPDFLoader: For loading and processing PDF documents.
+
+pytesseract & pdf2image: To handle scanned PDFs using OCR (Optical Character Recognition).
+
+Installation & Setup
+
+Prerequisites
+
+Ensure you have Python 3.8+ installed. You also need to install dependencies using the following steps:
+
+# Clone the repository
+git clone https://github.com/your-repo/RAG-Langchain-Streamlit.git
+cd RAG-Langchain-Streamlit
+
+# Create a virtual environment (optional but recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+Running the Application
+
+After installation, run the Streamlit application using:
+
+streamlit run app.py
+
+This will launch the web app in your browser, where you can upload PDFs and start querying them.
+
+How It Works
+
+Upload PDFs: Users can upload multiple unrelated PDFs.
+
+Text Extraction:
+
+Extracts text from structured PDFs using PyPDFLoader.
+
+Uses OCR (pytesseract) for scanned PDFs.
+
+Text Processing:
+
+Splits text into manageable chunks using RecursiveCharacterTextSplitter.
+
+Converts text into vector embeddings using HuggingFace Embeddings.
+
+Stores embeddings in a FAISS vector store for fast retrieval.
+
+Conversational Querying:
+
+Uses ConversationalRetrievalChain from LangChain to retrieve relevant information.
+
+The Mistral-7B-Instruct model generates responses based on retrieved text.
+
+Summarizes responses and provides confidence scores.
+
+User Interaction:
+
+The chat interface, built with Streamlit, allows users to ask questions and receive contextual responses.
+
+Expected Output
+
+High retrieval accuracy, ensuring only relevant information is extracted.
+
+Fast response times, optimized by caching and efficient indexing.
+
+Human-readable summarized answers rather than raw data.
+
+Confidence scores to indicate result reliability.
+
+Team - Dead Strings
+
+👩‍💻 Sree Chakritha 👩‍💻 Thrishita 👩‍💻 Sriya 👩‍💻 Akanksha
+
+Future Enhancements
+
+🔹 Implement metadata tagging for better search refinement.
+🔹 Support multimodal documents (images, tables, etc.).
+🔹 Deploy as a web service for broader accessibility.
